@@ -1,7 +1,6 @@
 package com.example.error404
 
 import android.os.Bundle
-import android.os.Message
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -25,7 +24,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.error404.ui.theme.Error404Theme
-import java.lang.Error
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,14 +55,19 @@ fun errorMessage(error: String, message: String, modifier: Modifier = Modifier){
             style = MaterialTheme.typography.bodyLarge,
             color = Color (63,123,255)
 
+
+
         )
         Text(
             text = message,
             fontSize = 30.sp,
-            style = MaterialTheme.typography.bodyLarge
+            style = MaterialTheme.typography.bodyLarge ,
+            modifier = Modifier.padding(bottom = 500.dp)
+
         )
     }
     Errobutton()
+    ErrorImage()
 }
 
 @Composable
@@ -83,7 +86,18 @@ fun Errobutton(){
         }
     }
 }
-
+@Composable
+fun ErrorImage(){
+    val img = painterResource(R.drawable.rr)
+    Column(modifier = Modifier.fillMaxSize().padding(top = 20.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Box(modifier = Modifier){
+            Image(painter = img, contentDescription = null )
+        }
+    }
+}
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
