@@ -8,7 +8,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -76,19 +78,18 @@ fun Errobutton(){
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally,){
         Button(
-            {}, Modifier.padding(80.dp), shape = RoundedCornerShape(20.dp),
+            {}, Modifier.padding(130.dp), shape = RoundedCornerShape(20.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color (63,123,255))
         ) {
-            Text(text = "GO HOME.",
+            Text(text = "GO HOME",
                 color = Color.White
-
             )
         }
     }
 }
 @Composable
 fun ErrorImage(){
-    val img = painterResource(R.drawable.rr)
+    val img = painterResource(R.drawable.slipping_with_a_banana_rafiki)
     Column(modifier = Modifier.fillMaxSize().padding(top = 20.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
