@@ -44,12 +44,13 @@ fun errorMessage(error: String, message: String, modifier: Modifier = Modifier){
         ) {
         Text(
             text = error,
-            fontSize = 30.sp
+            fontSize = 80.sp
         )
         Text(
             text = message,
             fontSize = 20.sp
         )
+
     }
 }
 
