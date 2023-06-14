@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.error404.ui.theme.Error404Theme
@@ -44,11 +45,15 @@ fun errorMessage(error: String, message: String, modifier: Modifier = Modifier){
         ) {
         Text(
             text = error,
-            fontSize = 80.sp
+            fontSize = 150.sp,
+            style = MaterialTheme.typography.bodyLarge,
+            color = Color (63,123,255)
+
         )
         Text(
             text = message,
-            fontSize = 20.sp
+            fontSize = 30.sp,
+            style = MaterialTheme.typography.bodyLarge
         )
 
     }
